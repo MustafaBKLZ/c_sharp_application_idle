@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4436FFE-903F-43BB-8025-D30D26596F17}</ProjectGuid>
+    <ProjectGuid>{FD91D9F2-1406-4263-A3E9-46C69201B266}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>idle</RootNamespace>
     <AssemblyName>idle</AssemblyName>
