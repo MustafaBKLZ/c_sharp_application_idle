@@ -14,33 +14,28 @@ namespace idle
     {
         public Form1()
         {
-            InitializeComponent();
-            Application.Idle += Application_Idle;
+            InitializeComponent();            
+            Application.Idle += Application_Idle; // event atamasını yapıyoruz. Başka türlü atama yapılamıyor.
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
         int sayac = 0;
         private void Application_Idle(object sender, EventArgs e)
         {
-            Thread.Sleep(100);
-            sayac++;
-            textBox1.Text = "\r\n" + "İdle = " + sayac.ToString();
+            Thread.Sleep(100); // 100 ms bekledik
+            sayac++; // sayacı +1 arttırdık
+            textBox1.Text = "İdle = " + sayac.ToString(); // idle durumunda olduğunu göstermek için textbox'a birşeyler yazdık.
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            stop = 0;
-            sayac = 0;
+            stop = 0; // durdurmayı iptal ettik
+            sayac = 0; // sayacı sıfırladık ki sayı çok büyümesin
             for (int i = 0; i < 500; i++)
-            {
-                Thread.Sleep(100);
-                textBox2.Text += "\r\n" + "For Looping";
-                Application.DoEvents();
-                if (stop == 1)
+            { 
+                Thread.Sleep(100); // 100 ms beklettik
+                textBox2.Text += "\r\n" + "For Looping "; // döngünün çalıştrığını göstermek için textbox'a birşeyler yazdık
+                Application.DoEvents(); //döngünün bitmesini bekledem yapılan işlemi anında göster dedik.
+                if (stop == 1) // eğer döngü durdurulmak istenmiş ise döngüyü kırıyoruz
                 {
                     break;
                 }
@@ -49,7 +44,7 @@ namespace idle
         int stop = 0;
         private void button2_Click(object sender, EventArgs e)
         {
-            stop = 1;
+            stop = 1; // döngüyü kır
         }
     }
 }
