@@ -1,2 +1,2 @@
-# C# Application Idle
-C# ile Application Idle olayına bir göz atayım dedim. Bu projede nasıl çalıştığını gösterilmiştir.
+# C# Application Idle (Boşta)
+C# ile Application Idle(Boşta) olayına bir göz atayım dedim. Bu projede nasıl çalıştığını gösterilmiştir.
